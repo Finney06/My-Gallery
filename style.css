@@ -148,8 +148,8 @@ footer a {
 @media screen and (max-width:375px) {
 
     .icon {
-        padding: 14px 15px;
-        width: 100px;
+        padding: 14px 0;
+        width: 98px;
     }
 
     main {
