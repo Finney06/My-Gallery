@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+:root {
+    --grey: #BDBDBD;
+    --black: hsla(160, 2%, 31%, 1);
+    --light-grey: hsla(0, 0%, 90%, 1);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+header {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.top {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.dp {
+    background-image: url(Images/Finney.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 156px;
+    height: 156px;
+    border-radius: 16px;
+    margin: 0 auto 16px;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--black);
+    font-weight: 600;
+    line-height: 29px;
+}
+
+h2 {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
+
+p {
+    font-size: 14px;
+    color: var(--grey);
+    font-weight: 600;
+    line-height: 17px;
+}
+
+.three-icon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.icon {
+    padding: 15px 24px;
+    background-color: var(--light-grey);
+    text-align: center;
+    border-radius: 12px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 80%;
+    margin: 64px 0 auto;
+    gap: 10px;
+}
+
+main .box {
+    width: 100%;
+    height: 100%;
+    grid-row: span 1;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+main .box img {
+    height: 100%;
+    width: 100%;
+    transition: all ease-in-out 200ms;
+    filter: grayscale(.5);
+}
+
+main .box img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+}
+
+main .box:nth-child(2) {
+    grid-column: 2/4;
+}
+
+main .box:nth-child(3) {
+    grid-column: 1/3;
+}
+
+main .box:nth-child(4) {
+    grid-column: 3/4;
+    grid-row: 2/4;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    margin: 44px 0 24px;
+    place-content: center;
+    font-size: 14px;
+    color: #B9BDCF;
+}
+
+footer a {
+    margin: 0 2px;
+    font-weight: 700;
+    color: #B9BDCF;
+}
+
+/* Mobile  Viewport */
+
+@media screen and (max-width:375px) {
+
+    .icon {
+        padding: 14px 15px;
+        width: 100px;
+    }
+
+    main {
+        width: 93px;
+    }
+}
